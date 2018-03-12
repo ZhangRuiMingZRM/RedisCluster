@@ -14,6 +14,11 @@ $seeds = array(
 	"127.0.0.1:7004",
 	"127.0.0.1:7005");
 $redis_cluster = new RedisCluster( NULL, $seeds, 1.5, 1.5 );
+$redis_cluster->set('clutertest','***ok***');
+$value = $redis_cluster->get('clutertest');
+var_dump($value);
+
+
 
 
 
